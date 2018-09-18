@@ -1,5 +1,5 @@
 
-import Test from './page-object';
+import Test from '../page_models/page-object';
 
 const action = new Test();
 
