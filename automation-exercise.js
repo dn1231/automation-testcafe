@@ -1,14 +1,18 @@
 
 import Test from './page-object';
 
-const take_action = new Test();
+const action = new Test();
 
 fixture `My fixture`
-    .page ``;
+    .page `http://automationpractice.com/index.php`;
 
 test('Validation', async t => {
     await t
-
+      .click(action.logo)
+      .typeText(action.searchField, 'dress')
+      .click(action.searchButton)
+      .expect(action.searchResult.value).contains('dress')
+      .expect(action.headerCount, '7 results have been found.').ok()
 
 })
 
