@@ -6,17 +6,17 @@ const action = new Test();
 fixture `My fixture`
     .page `http://automationpractice.com/index.php`;
 
-test('Validation', async t => {
+test('Critical Path, Search, and New User', async t => {
     await t
-      .click(action.logo)
-      .typeText(action.searchField, 'dress')
+      .click(action.logo) //validates main logo is present
+      .typeText(action.searchField, 'dress') //later can add a data-helper to randomize search
       .click(action.searchButton)
-      .expect(action.searchResult.value).contains('dress')
-      .expect(action.headerCount, '7 results have been found.').ok()
+      .click(action.Dress)
+
 
 })
 
-test('Validation 2', async t => {
+test('Critical Path, Search, and Existing User', async t => {
 
 	await t
 

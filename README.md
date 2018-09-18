@@ -1,5 +1,5 @@
 # automation-testcafe
-Using Testcafe automation with 1 command install
+Using Testcafe automation framework
 
 Ensure that Node.js (version 6 or newer) and npm are installed on your computer before running it:
 
