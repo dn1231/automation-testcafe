@@ -8,4 +8,6 @@ https://github.com/DevExpress/testcafe
 Steps:
 1) npm install -g testcafe
 2) create script in javascript or typescript
-3) run test command: testcafe [browser_name] [filename]
+3) cd to the test_scenarios folder
+4) run test command: testcafe [browser_name] [filename]
+5) 
