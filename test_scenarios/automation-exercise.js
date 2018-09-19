@@ -6,13 +6,6 @@ const action = new Test();
 fixture `My fixture`
     .page `http://automationpractice.com/index.php`;
 
-test('Critical Path, Search, and New User', async t => {
-
-    await t
-
-
-});
-
 test('Critical Path, Search, and Existing User', async t => {
 
     await t
@@ -52,3 +45,10 @@ test('Critical Path, Search, and Existing User', async t => {
       .click(action.confirmOrder)
       .expect(action.orderComplete.innerHTML).contains('Your order on My Store is complete.')
 })
+
+test('Critical Path, Search, and New User', async t => {
+
+    await t
+//potentially can reuse the above logic and reuse the page-object for a different test scenario
+
+});
