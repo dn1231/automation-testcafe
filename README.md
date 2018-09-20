@@ -5,13 +5,39 @@ Ensure that Node.js (version 6 or newer) and npm are installed on your computer 
 
 Steps to run test:
 
-1) npm install -g testcafe
-2) create script in javascript or typescript
-3) cd to the test_scenarios folder
-4) run test command: testcafe [browser_name] [filename]
+1) `npm install -g testcafe`
+2) create test scenarios in javascript or typescript (optional)
+3) cd to the `/automation-testcafe/test_scenarios/` folder
+4) run test command: `testcafe [browser_name] [filename]` (note: only installed browsers will work)
+
+Below are some examples to get you started.  Please use `testcafe --help` or `devexpress.github.io/testcafe/documentation/getting-started/` for more instructions
+
+Run on multiple installed browsers:
+run test command: `testcafe all [filename]`
+or: `testcafe [browser_name], [browser_name_2] [filename]`
+
+Emulate on mobile:
+`testcafe "chrome:emulation:device=[device_name]" [filename]`
+
+Run on any browser:
+1) `npm install testcafe-browser-provider-browserstack`
+2) hookup browserstack api and follow the instructions from `https://github.com/DevExpress/testcafe-browser-provider-browserstack`
 
 
 Steps to create new test_scenarios:
+
+1) Assertions in `/automation-testcafe/test_scenarios` will be the list of commands to execute Scenarios
+2) Selectors in `/automation-testcafe/page_models/` will be universally used in different Assertions to test different functionality
+3) Helper files such as `/automation-testcafe/helper_files/xpath-selector.js` will be used to utilize xpath commands, hooks to database, and other API (ex. browserstack)
+4) Write your test scenario in plain English using the BDD format in `/automation-testcafe/Features/BDD.feature`
+5) Locate your selectors either through the browser dev inspect tool or through the frontend codebase
+6) Add any new selectors to `/automation-testcafe/page_models/` and reuse any existing selectors
+7) Write your assertion test in `/automation-testcafe/test_scenarios` by calling the selectors created
+8) Create a new page object model for each section of your application
+
+
+
+Important Details:
 
 1) Helper_files are import files used by test_scenarios or page_models.  Examples are custom helper files such as the xpath-selector to utilize dynamic xpath selectors during testing.  Another example is helper files to link with database access, so a test script can verify data integrity.
 
