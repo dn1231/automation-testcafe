@@ -4,10 +4,12 @@ Using Testcafe automation framework (https://github.com/DevExpress/testcafe)
 Ensure that Node.js (version 6 or newer) and npm are installed on your computer before running it
 
 Steps to run test:
+
 1) npm install -g testcafe
 2) create script in javascript or typescript
 3) cd to the test_scenarios folder
 4) run test command: testcafe [browser_name] [filename]
+
 
 Steps to create new test_scenarios:
 
