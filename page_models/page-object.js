@@ -1,6 +1,6 @@
 //standard selectors
 import { Selector, ClientFunction } from 'testcafe';
-import Xpath from '../helper_files/xpath-selector'  //xpath is pretty brittle and this would be the last option to use if ID or css fails
+import Xpath from '../helper_files/xpath-selector'  //xpath is pretty brittle and this would be the last option to use if ID or css fails but please make sure you use dynamic xpath
 
 export default class Test {
     constructor () {
