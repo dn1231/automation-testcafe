@@ -31,7 +31,7 @@ test('Critical Path, Search, and Existing User', async t => {
       .typeText(action.emailAddressInput, 'james.jones@gmail.com')
       .typeText(action.passwordInput, 'LnHrThbzn4Zpkyn')
       .click(action.signInButton)
-      .expect(action.sameBillingCheckbox.innerHTML).contains('<span class="checked"><input type="checkbox" name="same" id="addressesAreEquals" value="1" checked="checked"></span>')
+      .click(action.sameBillingCheckbox)
       .typeText(action.addComment, 'testing order')
       .click(action.moveToShipping)
       .click(action.proceedToCheckout)
